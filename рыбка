@@ -1,0 +1,24 @@
+Console.Write("Введите строку: ");
+string input = Console.ReadLine();
+
+int digitCount = 0;
+int digitSum = 0;
+
+foreach (char c in input)
+{
+    if (char.IsDigit(c))
+    {
+        digitSum += int.Parse(c.ToString());
+        digitCount++;
+    }
+}
+
+if (digitCount > 0)
+{
+    double average = (double)digitSum / digitCount;
+    Console.WriteLine("Среднее арифметическое цифр: " + average);
+}
+else
+{
+    Console.WriteLine("В строке нет цифр.");
+}
